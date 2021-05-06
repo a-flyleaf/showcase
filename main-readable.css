@@ -1,0 +1,221 @@
+/*Amy Ferreira May 6, 2021*/
+
+/*UNIVERSAL*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	font-family: Montserrat, calibri, arial, sans-serif;
+	background: #003764;
+	background: url(bg-mobile.jpg) center left no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	color: #fff;
+	font-size: 1.25em;
+	line-height: 1.5em;
+	overflow-x: hidden;
+}
+
+a{
+	color: #fec24d;
+	font-weight: bold;
+	text-decoration: none;
+	transition: .3s;
+}
+
+a:hover, a:active, a:focus{
+	color: #fff;
+}
+
+::selection{
+	background: #003764;
+	color: #fec24d;
+}
+
+/*HEADER*/
+header{
+	padding: 11rem 1.5rem 1rem;
+	line-height: 1.25em;
+	text-transform: uppercase;
+	background: linear-gradient(rgba(0,0,0,0) 50%,rgba(0,0,0,.75));
+	text-shadow: 0 0 .5em #000, 0 0 .3em #000;
+}
+
+h1{
+	line-height: 1em;
+	font-size: 3em;
+	font-weight: normal;
+	margin-bottom: .5rem;
+	padding-left: 1rem;
+}
+
+/*header > student names*/
+header ul{
+	list-style-type: none;
+	font-size: .75em;
+	letter-spacing: .1em;
+	padding-left: .25rem;
+}
+
+header li{
+	display: inline-block;
+	padding-right: .5em;
+}
+
+header li::before, header li:last-child::after{
+	content: "·";
+	font-size: 1.25em;
+}
+
+header li::before{
+	padding-right: .5em;
+}
+
+header li:last-child::after{
+	padding-left: .5em;
+}
+
+/*MAIN*/
+main{
+	background: rgba(0,0,0,.75);
+}
+
+section{
+	padding: 1.5rem 2.5rem;
+}
+
+h2{
+	text-transform: uppercase;
+	letter-spacing: .05em;
+	line-height: 1.25em;
+}
+
+iframe{
+	margin-top: 1rem;
+	width: 100%;
+}
+
+h3{
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	font-size: .85em;
+	margin: .5em 0 0;
+}
+
+/*main > project links*/
+section ul{
+	list-style-type: none;
+	font-size: .85em;
+	line-height: 1.35em;
+}
+
+section li::before{
+	content: "·";
+	font-size: 1.25em;
+	font-weight: bold;
+	padding-right: .5em;
+	margin-left: -.75em;
+}
+
+section li{
+	margin-bottom: .5em;
+}
+section:last-of-type{
+	padding-bottom: 3.5em;
+}
+
+aside{
+	background: #003764;
+	padding: 1rem 2.5rem;
+}
+
+/*FOOTER*/
+footer{
+	padding: 1rem 2.5rem 1.5rem;
+	font-size: .75em;
+	line-height: 1.5em;
+}
+
+footer p{
+	margin: .5em 0;
+}
+
+/*TWO-COLUMN*/
+@media only screen and (min-width: 750px) {
+	
+	/*two-col > universal*/
+	body{
+		background: url(bg.jpeg) center no-repeat;
+		background-size: cover;
+		background-attachment: fixed;
+	}
+	
+	.wrap{
+		max-width: 60rem;
+		margin: 0 auto;
+		overflow: auto;
+	}
+	
+	/*two-col > header*/
+	header{
+		overflow: auto;
+		background: linear-gradient(rgba(0,0,0,0) 25%, rgba(0,0,0,.75));
+	}
+	
+	h1{
+		max-width: 10em;
+		padding-top: 1em;
+	}
+	
+	header ul{
+		float: right;
+		text-align: right;
+		max-width: 40em;
+	}
+	
+	header li::before{
+		content: none;
+	}
+	
+	header li::after{
+		content: "·";
+		font-size: 1.25em;
+		margin-left: .5em;
+	}
+	
+	/*two-col > main*/
+	main{
+		overflow: auto;
+	}
+	
+	section{
+		width: 50%;
+		max-width: 30rem;
+		float: left;
+	}
+	
+	aside{
+		max-width: 60rem;
+		margin: 0 auto;
+	}
+	
+	aside span{
+		display: block;
+		margin: .5em 0;
+	}
+	
+	/*two-col > footer*/
+	footer{
+		text-align: right;
+	}
+}
+
+/*bit of a hack to make the header and content align*/
+@media only screen and (min-width: 61rem) {
+	header .wrap{
+		max-width: 57rem;
+	}
+}
