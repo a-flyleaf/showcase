@@ -65,17 +65,10 @@ header li{
 	padding-right: .5em;
 }
 
-header li::before, header li:last-child::after{
+header li::before{
 	content: "·";
 	font-size: 1.25em;
-}
-
-header li::before{
 	padding-right: .5em;
-}
-
-header li:last-child::after{
-	padding-left: .5em;
 }
 
 /*MAIN*/
